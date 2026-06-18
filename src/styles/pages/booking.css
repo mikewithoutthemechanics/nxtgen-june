@@ -1,0 +1,19 @@
+/* Booking Flow */
+.booking-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.booking-step {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+}
+
+.booking-step__title {
+  font-family: var(--font-heading);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-3);
+}

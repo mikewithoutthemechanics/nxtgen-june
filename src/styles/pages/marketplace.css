@@ -1,0 +1,41 @@
+/* Tutor Filter Sidebar */
+.filter-sidebar {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+}
+
+.filter-group {
+  margin-bottom: var(--space-6);
+}
+
+.filter-group:last-child {
+  margin-bottom: 0;
+}
+
+.filter-group__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-3);
+}
+
+.filter-group__options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.filter-option input[type="checkbox"],
+.filter-option input[type="radio"] {
+  accent-color: var(--color-primary-emerald);
+  width: 1rem;
+  height: 1rem;
+}

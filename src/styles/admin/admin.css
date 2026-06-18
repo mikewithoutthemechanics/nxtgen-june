@@ -1,0 +1,17 @@
+/* Mission Control Layout */
+.mission-control__sidebar {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+}
+
+.mission-control__sidebar ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.mission-control__panel {
+  min-width: 0;
+}

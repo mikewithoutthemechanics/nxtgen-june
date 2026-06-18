@@ -1,0 +1,72 @@
+/* ============================================
+   COMPONENT: RATING (STARS)
+   ============================================ */
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.rating__stars {
+  display: inline-flex;
+  gap: 0.125rem;
+}
+
+.rating__star {
+  width: 1.125rem;
+  height: 1.125rem;
+  color: #D1D5DB;
+}
+
+.rating__star--filled {
+  color: var(--color-premium-gold);
+}
+
+.rating__star--half {
+  position: relative;
+  color: #D1D5DB;
+}
+
+.rating__star--half::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.rating__value {
+  font-size: var(--text-small);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+  margin-left: var(--space-1);
+}
+
+.rating__count {
+  font-size: var(--text-small);
+  color: var(--color-text-secondary);
+  margin-left: var(--space-1);
+}
+
+/* Rating Input (Interactive) */
+.rating-input {
+  display: inline-flex;
+  gap: var(--space-1);
+}
+
+.rating-input__star {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #D1D5DB;
+  cursor: pointer;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.rating-input__star:hover,
+.rating-input__star.is-active {
+  color: var(--color-premium-gold);
+  transform: scale(1.1);
+}

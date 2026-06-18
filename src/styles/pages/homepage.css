@@ -1,0 +1,27 @@
+/* Homepage */
+.hero {
+  background: linear-gradient(135deg, var(--color-light-bg) 0%, #E0F2FE 100%);
+  border-radius: var(--radius-2xl);
+}
+
+.hero__search {
+  max-width: 36rem;
+}
+
+.hero__stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+@media (min-width: 768px) {
+  .hero__stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.section__title {
+  font-family: var(--font-heading);
+  font-weight: var(--font-extrabold);
+  margin-bottom: var(--space-4);
+}

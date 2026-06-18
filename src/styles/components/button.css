@@ -1,0 +1,129 @@
+/* ============================================
+   COMPONENT: BUTTON
+   ============================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-body);
+  font-size: var(--text-button);
+  font-weight: var(--font-semibold);
+  line-height: 1;
+  border-radius: var(--radius-lg);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-academic-blue);
+  outline-offset: 2px;
+}
+
+/* Variants */
+.btn--primary {
+  background-color: var(--color-primary-emerald);
+  color: var(--color-white);
+  border-color: var(--color-primary-emerald);
+}
+
+.btn--primary:hover {
+  background-color: #059669;
+  border-color: #059669;
+}
+
+.btn--secondary {
+  background-color: var(--color-academic-blue);
+  color: var(--color-white);
+  border-color: var(--color-academic-blue);
+}
+
+.btn--secondary:hover {
+  background-color: #1D4ED8;
+  border-color: #1D4ED8;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-primary-navy);
+  border-color: var(--color-primary-navy);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-primary-navy);
+  color: var(--color-white);
+}
+
+.btn--ghost {
+  background-color: transparent;
+  color: var(--color-primary-navy);
+  border-color: transparent;
+}
+
+.btn--ghost:hover {
+  background-color: var(--color-light-bg);
+}
+
+.btn--gold {
+  background-color: var(--color-premium-gold);
+  color: var(--color-primary-navy);
+  border-color: var(--color-premium-gold);
+}
+
+.btn--gold:hover {
+  background-color: #E5A82F;
+  border-color: #E5A82F;
+}
+
+/* Sizes */
+.btn--sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-small);
+  border-radius: var(--radius-md);
+}
+
+.btn--lg {
+  padding: var(--space-4) var(--space-8);
+  font-size: 1.0625rem;
+  border-radius: var(--radius-xl);
+}
+
+/* States */
+.btn:disabled,
+.btn.is-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn.is-loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+}
+
+.btn.is-loading::after {
+  content: "";
+  position: absolute;
+  width: 1.25em;
+  height: 1.25em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: var(--radius-full);
+  animation: btn-spin 0.6s linear infinite;
+}
+
+@keyframes btn-spin {
+  to { transform: rotate(360deg); }
+}
+
+.btn--icon {
+  padding: var(--space-3);
+  border-radius: var(--radius-full);
+}
